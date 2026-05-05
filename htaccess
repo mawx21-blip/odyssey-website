@@ -1,0 +1,35 @@
+# ==========================================================================
+# ODYSSEY LAWN CARE — URL CLEANUP REDIRECTS
+# Added 2026-04-29 — handles old site retirement + v2 URL flattening
+# ==========================================================================
+
+# ---- v2- prefix retirement (rebuild URLs to clean URLs) ----
+Redirect 301 /v2-lawn-mowing/ https://odysseylawncarellc.com/lawn-mowing/
+Redirect 301 /v2-bush-trimming-removal/ https://odysseylawncarellc.com/bush-trimming-removal/
+Redirect 301 /v2-mulch-installation/ https://odysseylawncarellc.com/mulch-installation/
+Redirect 301 /v2-flowerbed-maintenance/ https://odysseylawncarellc.com/flowerbed-maintenance/
+Redirect 301 /v2-leaf-cleanup/ https://odysseylawncarellc.com/leaf-cleanup/
+Redirect 301 /v2-christmas-lights/ https://odysseylawncarellc.com/christmas-lights/
+Redirect 301 /v2-southaven-ms/ https://odysseylawncarellc.com/southaven-ms/
+Redirect 301 /v2-olive-branch-ms/ https://odysseylawncarellc.com/olive-branch-ms/
+Redirect 301 /v2-horn-lake-ms/ https://odysseylawncarellc.com/horn-lake-ms/
+Redirect 301 /v2-about-us/ https://odysseylawncarellc.com/about-us/
+Redirect 301 /v2-faq/ https://odysseylawncarellc.com/faq/
+Redirect 301 /v2-contact-us/ https://odysseylawncarellc.com/contact-us/
+
+# ---- Pretty URLs: serve /lawn-mowing/ from /lawn-mowing.html ----
+# This lets you keep flat .html files but expose clean URLs.
+RewriteEngine On
+
+# Redirect /page.html → /page/ (so visitors and Google see the clean URL)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+RewriteRule ^ %1/ [R=301,L]
+
+# Internally serve /folder/ from /folder.html if the file exists
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteCond %{REQUEST_URI} ^/([^.]+)/$
+RewriteRule ^(.+)/$ /$1.html [L]
+
+# ==========================================================================
+# END ODYSSEY URL CLEANUP
+# ==========================================================================
