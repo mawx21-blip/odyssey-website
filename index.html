@@ -1727,7 +1727,7 @@
                 <input type="tel" id="q-phone" name="phone" required autocomplete="tel" placeholder="(662) 555-0100">
               </div>
               <div class="form-field">
-                <label for="q-email">Email</label>
+                <label for="q-email">Email Address</label>
                 <input type="email" id="q-email" name="email" required autocomplete="email" placeholder="you@example.com">
               </div>
             </div>
@@ -2278,7 +2278,7 @@
     const firstName = (document.getElementById('q-first-name')?.value || '').trim();
     const lastName = (document.getElementById('q-last-name')?.value || '').trim();
     const address = (document.getElementById('q-address')?.value || '').trim();
-    const fullName = [firstName, lastName].filter(Boolean).join(' ') || '[your name]';
+    const fullName = [firstName, lastName].filter(Boolean).join(' ') || '_____';
     const addressText = address || '';
     const message = `Hi, my name is ${fullName}. I'd like a lawn care quote. My address is: ${addressText}`;
     document.querySelectorAll('a[href^="sms:+16627330133"]').forEach(link => {

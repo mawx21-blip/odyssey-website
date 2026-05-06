@@ -1444,12 +1444,23 @@
 
             <div class="form-row-2">
               <div class="form-field">
-                <label for="q-name">Name</label>
-                <input type="text" id="q-name" name="name" required autocomplete="name">
+                <label for="q-first-name">First Name</label>
+                <input type="text" id="q-first-name" name="first_name" required autocomplete="given-name">
               </div>
+              <div class="form-field">
+                <label for="q-last-name">Last Name</label>
+                <input type="text" id="q-last-name" name="last_name" required autocomplete="family-name">
+              </div>
+            </div>
+
+            <div class="form-row-2">
               <div class="form-field">
                 <label for="q-phone">Phone</label>
                 <input type="tel" id="q-phone" name="phone" required autocomplete="tel" placeholder="(662) 555-0100">
+              </div>
+              <div class="form-field">
+                <label for="q-email">Email Address</label>
+                <input type="email" id="q-email" name="email" required autocomplete="email" placeholder="you@example.com">
               </div>
             </div>
 
@@ -1605,6 +1616,28 @@
     }
   }
 
+
+  function updateTextUsLinks() {
+    const firstName = (document.getElementById('q-first-name')?.value || '').trim();
+    const lastName = (document.getElementById('q-last-name')?.value || '').trim();
+    const address = (document.getElementById('q-address')?.value || '').trim();
+    const fullName = [firstName, lastName].filter(Boolean).join(' ') || '_____';
+    const addressText = address || '';
+    const message = `Hi, my name is ${fullName}. I'd like a bush trimming quote. My address is: ${addressText}`;
+
+    document.querySelectorAll('a[href^="sms:+16627330133"]').forEach(link => {
+      const href = decodeURIComponent(link.getAttribute('href') || '');
+      if (href.includes('quote')) {
+        link.href = `sms:+16627330133?body=${encodeURIComponent(message)}`;
+      }
+    });
+  }
+
+  ['q-first-name', 'q-last-name', 'q-address'].forEach(id => {
+    const field = document.getElementById(id);
+    if (field) field.addEventListener('input', updateTextUsLinks);
+  });
+  updateTextUsLinks();
   // FAQ accordion
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
