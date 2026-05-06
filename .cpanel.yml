@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mawx21/public_html/
+    - export DEPLOYPATH=/home2/npbahrmy/public_html/
     - /bin/cp -R index.html $DEPLOYPATH
     - /bin/cp -R .htaccess $DEPLOYPATH
     - /bin/cp -R header-logo.webp $DEPLOYPATH
