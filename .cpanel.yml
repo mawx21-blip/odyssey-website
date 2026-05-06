@@ -1,6 +1,22 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/MAWX21@GMAIL.COM/public_html/
-    - /bin/cp -R * $DEPLOYPATH
-    - /bin/cp .htaccess $DEPLOYPATH
+    - export DEPLOYPATH=/home/mawx21@gmail.com/public_html/
+    - /bin/cp -R index.html $DEPLOYPATH
+    - /bin/cp -R .htaccess $DEPLOYPATH
+    - /bin/cp -R header-logo.webp $DEPLOYPATH
+    - /bin/cp -R hero-image.webp $DEPLOYPATH
+    - /bin/cp -R michael-image.webp $DEPLOYPATH
+    - /bin/cp -R new-home $DEPLOYPATH
+    - /bin/cp -R lawn-mowing $DEPLOYPATH
+    - /bin/cp -R bush-trimming-removal $DEPLOYPATH
+    - /bin/cp -R mulch-installation $DEPLOYPATH
+    - /bin/cp -R flowerbed-maintenance $DEPLOYPATH
+    - /bin/cp -R leaf-cleanup $DEPLOYPATH
+    - /bin/cp -R christmas-lights $DEPLOYPATH
+    - /bin/cp -R southaven-ms $DEPLOYPATH
+    - /bin/cp -R olive-branch-ms $DEPLOYPATH
+    - /bin/cp -R horn-lake-ms $DEPLOYPATH
+    - /bin/cp -R about-us $DEPLOYPATH
+    - /bin/cp -R faq $DEPLOYPATH
+    - /bin/cp -R contact-us $DEPLOYPATH
