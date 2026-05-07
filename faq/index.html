@@ -314,16 +314,9 @@
     z-index: 100;
     border-bottom: 1px solid var(--line);
   }
-  .nav-inner {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1rem clamp(1.25rem, 4vw, 3rem);
-    max-width: 1240px; margin: 0 auto;
-  }
-  .logo {
-    font-family: var(--display); font-size: 1.375rem; font-weight: 600;
-    color: var(--forest-ink); text-decoration: none; letter-spacing: -0.01em;
-  }
-  .logo .dot { color: var(--terracotta); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.35rem clamp(1rem, 3vw, 2rem); max-width: 1240px; margin: 0 auto; min-height: 78px; }
+  .logo { display: inline-flex; align-items: center; text-decoration: none; line-height: 1; background: transparent; }
+  .logo img { display: block; height: 84px; width: auto; max-width: 650px; background: transparent; }
   .nav-links { display: flex; gap: 2rem; align-items: center; }
   .nav-links > a, .nav-links > div > button {
     font-size: 0.9375rem; color: var(--ink); text-decoration: none;
@@ -683,10 +676,8 @@
     gap: 2.5rem;
     margin-bottom: 2.5rem;
   }
-  .footer-brand .logo {
-    color: var(--cream); font-size: 1.5rem;
-    display: inline-block; margin-bottom: 0.75rem;
-  }
+  .footer-brand .logo { display: inline-flex; align-items: center; margin-bottom: 0.75rem; }
+  .footer-brand .logo img { height: 54px; width: auto; max-width: 240px; }
   .footer-brand p {
     color: var(--sage-100); font-size: 0.875rem;
     line-height: 1.6; max-width: 320px; opacity: 0.75;
@@ -782,6 +773,9 @@
     .mobile-cta-bar { display: flex; }
     body { padding-bottom: 76px; }
   }
+  @media (max-width: 600px) {
+    .logo img { height: 56px; max-width: 82vw; }
+  }
 </style>
 </head>
 <body>
@@ -789,7 +783,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="/" class="logo">Odyssey<span class="dot">.</span> Lawn Care</a>
+    <a href="/" class="logo" aria-label="Odyssey Lawn Care"><img src="/header-logo.webp" alt="Odyssey Lawn Care"></a>
     <div class="nav-links">
       <div class="nav-dropdown">
         <button>Services</button>
@@ -1248,7 +1242,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="logo">Odyssey<span style="color: var(--terracotta)">.</span> Lawn Care</a>
+        <a href="/" class="logo" aria-label="Odyssey Lawn Care"><img src="/header-logo.webp" alt="Odyssey Lawn Care"></a>
         <p>Reliable, professional lawn care for DeSoto County homeowners. Southaven-based, built for the long haul.</p>
       </div>
       <div class="footer-col">

@@ -276,36 +276,7 @@
     -webkit-backdrop-filter: blur(12px);
     z-index: 100;
     border-bottom: 1px solid var(--line);
-  }
-
- .nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.35rem clamp(1rem, 3vw, 2rem);
-  max-width: 1240px;
-  margin: 0 auto;
-  min-height: 78px;
-}
-
-  .logo {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    line-height: 1;
-    background: transparent;
-  }
-
-.logo img {
-  display: block;
-  height: 84px;
-  width: auto;
-  max-width: 650px;
-  background: transparent;
-}
-
-  .logo .dot { color: var(--terracotta); }
-
+  }  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.35rem clamp(1rem, 3vw, 2rem); max-width: 1240px; margin: 0 auto; min-height: 78px; }  .logo { display: inline-flex; align-items: center; text-decoration: none; line-height: 1; background: transparent; }  .logo img { display: block; height: 84px; width: auto; max-width: 650px; background: transparent; }
   .nav-links {
     display: flex;
     gap: 2.25rem;
@@ -1504,14 +1475,8 @@
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 2.5rem;
     margin-bottom: 2.5rem;
-  }
-
-  .footer-brand .logo {
-    color: var(--cream);
-    font-size: 1.5rem;
-    display: inline-block;
-    margin-bottom: 0.75rem;
-  }
+  }  .footer-brand .logo { display: inline-flex; align-items: center; margin-bottom: 0.75rem; }
+  .footer-brand .logo img { height: 54px; width: auto; max-width: 240px; }
 
   .footer-brand p {
     color: var(--sage-100);
@@ -1626,7 +1591,7 @@
 <!-- ==================== NAV ==================== -->
 <nav>
   <div class="nav-inner">
-    <a href="/" class="logo" aria-label="Odyssey Lawn Care"><img src="header-logo.webp" alt="Odyssey Lawn Care"></a>
+    <a href="/" class="logo" aria-label="Odyssey Lawn Care"><img src="/header-logo.webp" alt="Odyssey Lawn Care"></a>
     <div class="nav-links">
       <div class="nav-dropdown">
         <button>Services</button>
@@ -2179,7 +2144,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="logo">Odyssey<span style="color: var(--terracotta)">.</span> Lawn Care</a>
+        <a href="/" class="logo" aria-label="Odyssey Lawn Care"><img src="/header-logo.webp" alt="Odyssey Lawn Care"></a>
         <p>Reliable, professional lawn care for DeSoto County homeowners. Southaven-based, owner-operated, built for the long haul.</p>
       </div>
 

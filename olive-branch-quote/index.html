@@ -125,15 +125,8 @@ unless your landing page gets very heavy traffic.
     margin: 0 auto;
     padding: 0 clamp(1.25rem, 4vw, 3rem);
   }
-  .lp-logo {
-    font-family: var(--display);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--forest-ink);
-    text-decoration: none;
-    letter-spacing: -0.01em;
-  }
-  .lp-logo .dot { color: var(--terracotta); }
+  .lp-logo { display: inline-flex; align-items: center; text-decoration: none; line-height: 1; background: transparent; }
+  .lp-logo img { display: block; height: 64px; width: auto; max-width: 52vw; background: transparent; }
   .lp-header-phone {
     display: inline-flex;
     align-items: center;
@@ -153,7 +146,9 @@ unless your landing page gets very heavy traffic.
   }
   .lp-header-phone-text { display: inline; }
   @media (max-width: 480px) {
-    .lp-header-phone { padding: 0.5rem 0.75rem; }
+    
+    .lp-logo img { height: 48px; max-width: 58vw; }
+.lp-header-phone { padding: 0.5rem 0.75rem; }
     .lp-header-phone-text { display: none; }
   }
 
@@ -804,7 +799,7 @@ unless your landing page gets very heavy traffic.
 <!-- MINIMAL HEADER -->
 <header class="lp-header">
   <div class="lp-header-inner">
-    <a href="/" class="lp-logo">Odyssey<span class="dot">.</span> Lawn Care</a>
+    <a href="/" class="lp-logo logo" aria-label="Odyssey Lawn Care"><img src="/header-logo.webp" alt="Odyssey Lawn Care"></a>
     <a href="tel:6627330133" class="lp-header-phone">
       <span>📞</span>
       <span class="lp-header-phone-text">(662) 733-0133</span>
