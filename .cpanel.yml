@@ -2,7 +2,25 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/npbahrmy/public_html/
-    - /usr/bin/rsync -av --delete --exclude='.git' --exclude='.cpanel.yml' ./ $DEPLOYPATH
+    - /bin/cp -f index.html $DEPLOYPATH
+    - /bin/cp -f .htaccess $DEPLOYPATH
+    - /bin/cp -f header-logo.webp $DEPLOYPATH
+    - /bin/cp -f hero-image.webp $DEPLOYPATH
+    - /bin/cp -f michael-image.webp $DEPLOYPATH
+    - /bin/cp -Rf new-home $DEPLOYPATH
+    - /bin/cp -Rf lawn-mowing $DEPLOYPATH
+    - /bin/cp -Rf bush-trimming-removal $DEPLOYPATH
+    - /bin/cp -Rf mulch-installation $DEPLOYPATH
+    - /bin/cp -Rf flowerbed-maintenance $DEPLOYPATH
+    - /bin/cp -Rf leaf-cleanup $DEPLOYPATH
+    - /bin/cp -Rf christmas-lights $DEPLOYPATH
+    - /bin/cp -Rf southaven-ms $DEPLOYPATH
+    - /bin/cp -Rf olive-branch-ms $DEPLOYPATH
+    - /bin/cp -Rf horn-lake-ms $DEPLOYPATH
+    - /bin/cp -Rf about-us $DEPLOYPATH
+    - /bin/cp -Rf faq $DEPLOYPATH
+    - /bin/cp -Rf contact-us $DEPLOYPATH
+    - /bin/cp -Rf careers $DEPLOYPATH
     - /bin/find $DEPLOYPATH -type d -exec chmod 755 {} \;
     - /bin/find $DEPLOYPATH -type f -exec chmod 644 {} \;
     - /bin/chmod 644 $DEPLOYPATH/.htaccess
