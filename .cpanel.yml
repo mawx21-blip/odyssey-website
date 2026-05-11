@@ -2,4 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/npbahrmy/public_html/
-    - /bin/cp -f deploy-test.txt $DEPLOYPATH
+    - /bin/cp -Rf * $DEPLOYPATH
+    - /bin/cp -f .htaccess $DEPLOYPATH
+    - /bin/chmod -R 755 $DEPLOYPATH
+    - /bin/chmod 644 $DEPLOYPATH/.htaccess
