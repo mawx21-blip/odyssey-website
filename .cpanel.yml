@@ -54,6 +54,5 @@ deployment:
     - /bin/rm -rf $DEPLOYPATH/olive-branch-quote
     - /bin/cp -Rf olive-branch-quote $DEPLOYPATH
 
-    - /bin/find $DEPLOYPATH -type d -exec chmod 755 {} \;
-    - /bin/find $DEPLOYPATH -type f -exec chmod 644 {} \;
+    - /bin/chmod -R 755 $DEPLOYPATH
     - /bin/chmod 644 $DEPLOYPATH/.htaccess
