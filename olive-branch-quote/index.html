@@ -3,9 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
 <title>Olive Branch's Most Reliable Lawn Service | Free Quote in 2 Business Hours</title>
 <meta name="description" content="Reliable, professional lawn mowing for Olive Branch homes. Same day every week. 100+ Google reviews. Starting at $50/cut. Get a free quote in 2 business hours.">
 <link rel="canonical" href="https://odysseylawncarellc.com/olive-branch-quote/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" as="image" type="image/webp" href="/hero-image-1200.webp" media="(max-width: 720px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="/hero-image.webp" media="(min-width: 721px)" fetchpriority="high">
 
 <meta property="og:title" content="Olive Branch's Most Reliable Lawn Service">
 <meta property="og:description" content="Same team, same day, every week. 100+ Google reviews. Get a free quote in 2 business hours.">
@@ -912,7 +919,10 @@ form button:disabled { opacity: .7; cursor: wait; }
   .site-nav .nav-links > a, .site-nav .nav-dropdown > button { width: 100%; padding: 10px 14px; white-space: normal; }
   .site-nav .nav-dropdown-menu, .site-nav .nav-dropdown:hover .nav-dropdown-menu, .site-nav .nav-dropdown:focus-within .nav-dropdown-menu { position: static; transform: none !important; min-width: 0; box-shadow: none; opacity: 1; visibility: visible; }
   .site-nav .nav-links { display: none; }
-  .site-nav.nav-enhanced .mobile-toggle { display: inline-flex; }
+  .site-nav .mobile-toggle { display: inline-flex; }
+  /* Without JavaScript the menu opens while the hamburger (or a link inside it) has focus. */
+  .site-nav:not(.nav-enhanced):focus-within .nav-links { display: flex; position: absolute; top: 100%; left: 0; right: 0; width: auto; background: #F9F3EE; border-bottom: 1px solid #E3DDCE; }
+  .site-nav:not(.nav-enhanced):focus-within .nav-dropdown-menu { opacity: 1; visibility: visible; }
   .site-nav.nav-enhanced .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; width: auto; background: #F9F3EE; border-bottom: 1px solid #E3DDCE; max-height: calc(100vh - var(--header-height) - 100px); max-height: calc(100dvh - var(--header-height) - 100px); overflow-y: auto; overscroll-behavior: contain; }
   .site-nav.nav-enhanced.menu-open .nav-links { display: flex; }
   .form-field input, .form-field select, .form-field textarea { font-size: 16px; }
@@ -996,12 +1006,14 @@ form button:disabled { opacity: .7; cursor: wait; }
   .estimate-hero h1 { font-size: clamp(34px,8vw,48px); }
 }
 @media (max-width: 359px) { .compact-estimate .compact-row { grid-template-columns: minmax(0,1fr); } }
+/* Phones get a lighter copy of the same photo. */
+@media (max-width: 720px) { .lp-hero-bg { background-image: url('/hero-image-1200.webp'); } }
 </style></head>
 <body>
 
-<noscript><style>.site-nav .nav-links { display:flex!important; position:static!important; } .site-nav .nav-dropdown-menu[hidden] { display:block!important; opacity:1!important; visibility:visible!important; } .site-nav .mobile-toggle { display:none!important; }</style></noscript><a class="skip-link" href="#main-content">Skip to main content</a><nav id="site-nav" aria-label="Main navigation" class="site-nav">
+<noscript><style>.site-nav .nav-dropdown-menu[hidden] { display:block!important; }</style></noscript><a class="skip-link" href="#main-content">Skip to main content</a><nav id="site-nav" aria-label="Main navigation" class="site-nav">
   <div class="nav-inner">
-    <a href="/" class="logo" aria-label="Odyssey Lawn Care"><img src="/header-logo.webp" alt="Odyssey Lawn Care" width="2172" height="724"></a>
+    <a href="/" class="logo" aria-label="Odyssey Lawn Care"><img src="/header-logo-528.webp" alt="Odyssey Lawn Care" width="528" height="176"></a>
     <button type="button" class="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation"><span aria-hidden="true">☰</span></button>
     <div class="nav-links" id="primary-navigation">
       <div class="nav-dropdown">
@@ -1012,6 +1024,9 @@ form button:disabled { opacity: .7; cursor: wait; }
           <a href="/mulch-installation/">Mulch Installation</a>
           <a href="/flowerbed-maintenance/">Flowerbed Maintenance</a>
           <a href="/leaf-cleanup/">Leaf &amp; Yard Cleanup</a>
+          <a href="/fertilization-weed-control/">Fertilization &amp; Weed Control</a>
+          <a href="/fire-ant-treatment/">Fire Ant Treatment</a>
+          <a href="/grub-treatment/">Grub Treatment</a>
           <a href="/christmas-lights/">Christmas Lights</a>
         </div>
       </div>
