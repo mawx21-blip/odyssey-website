@@ -12,7 +12,7 @@ Redirect 301 /v2-leaf-cleanup/ https://odysseylawncarellc.com/leaf-cleanup/
 Redirect 301 /v2-christmas-lights/ https://odysseylawncarellc.com/christmas-lights/
 Redirect 301 /v2-southaven-ms/ https://odysseylawncarellc.com/southaven-ms/
 Redirect 301 /v2-olive-branch-ms/ https://odysseylawncarellc.com/olive-branch-ms/
-Redirect 301 /v2-horn-lake-ms/ https://odysseylawncarellc.com/horn-lake-ms/
+Redirect gone /v2-horn-lake-ms/
 Redirect 301 /v2-about-us/ https://odysseylawncarellc.com/about-us/
 Redirect 301 /v2-faq/ https://odysseylawncarellc.com/faq/
 Redirect 301 /v2-contact-us/ https://odysseylawncarellc.com/contact-us/
