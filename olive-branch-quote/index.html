@@ -54,13 +54,13 @@ PASTE GLOBAL SITE TAG HERE:
   gtag('config', 'G-1PZ1QWVX6S');
 </script>
 
-<!-- Fonts are hosted on this site (added 2026-11-22). Files live in /fonts/. -->
+<!-- shared:fonts --><!-- Fonts are hosted on this site (added 2026-11-22). Files live in /fonts/. -->
 <link rel="preload" href="/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/fraunces-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/fraunces-latin-var.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
 @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/inter-latin-var.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
-</style>
+</style><!-- /shared:fonts -->
 
 <!-- ========================================================== -->
 <!-- GOOGLE PLACES API — REPLACE YOUR_API_KEY_HERE WITH REAL KEY -->
@@ -1015,7 +1015,7 @@ form button:disabled { opacity: .7; cursor: wait; }
 </style></head>
 <body>
 
-<noscript><style>.site-nav .nav-dropdown-menu[hidden] { display:block!important; }</style></noscript><a class="skip-link" href="#main-content">Skip to main content</a><nav id="site-nav" aria-label="Main navigation" class="site-nav">
+<noscript><style>.site-nav .nav-dropdown-menu[hidden] { display:block!important; }</style></noscript><a class="skip-link" href="#main-content">Skip to main content</a><!-- shared:header cta_href="#quoteForm" --><nav id="site-nav" aria-label="Main navigation" class="site-nav">
   <div class="nav-inner">
     <a href="/" class="logo" aria-label="Odyssey Lawn Care"><img src="/header-logo-528.webp" alt="Odyssey Lawn Care" width="528" height="176"></a>
     <button type="button" class="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation"><span aria-hidden="true">☰</span></button>
@@ -1039,28 +1039,21 @@ form button:disabled { opacity: .7; cursor: wait; }
         <div class="nav-dropdown-menu" id="areas-menu" hidden="">
           <a href="/southaven-ms/">Southaven, MS</a>
           <a href="/olive-branch-ms/">Olive Branch, MS</a>
-          
         </div>
       </div>
       <div class="nav-dropdown">
-
         <button type="button" aria-controls="about-menu" aria-expanded="false">About</button>
-
         <div class="nav-dropdown-menu" id="about-menu" hidden="">
-
           <a href="/about-us/">About Us</a>
-
           <a href="/careers/">Careers</a>
-
         </div>
-
       </div>
       <a href="/faq/">FAQ</a>
       <a href="/contact-us/">Contact</a>
       <a href="#quoteForm" class="nav-cta">Get Estimate</a>
     </div>
   <a href="tel:+16627330133" class="header-phone" aria-label="Call Odyssey Lawn Care at (662) 733-0133"><span class="header-phone-label">Call our local team</span><strong>(662) 733-0133</strong></a></div>
-</nav>
+</nav><!-- /shared:header -->
 
 <main id="main-content" tabindex="-1"><!-- HERO with form -->
 <section class="lp-hero estimate-hero">
