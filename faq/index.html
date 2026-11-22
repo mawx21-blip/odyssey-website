@@ -268,9 +268,13 @@
   gtag('config', 'G-1PZ1QWVX6S');
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Fonts are hosted on this site (added 2026-11-22). Files live in /fonts/. -->
+<link rel="preload" href="/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fraunces-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/fraunces-latin-var.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/inter-latin-var.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+</style>
 
 <style>
   :root {
@@ -528,6 +532,31 @@
     color: var(--muted);
     font-size: 1rem;
     line-height: 1.55;
+  }
+
+  /* YEAR-ROUND CALENDAR TABLE (added 2026-11-22) */
+  .calendar-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: white; }
+  .calendar-table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; line-height: 1.5; }
+  .calendar-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .calendar-table th, .calendar-table td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .calendar-table thead th { font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--moss); background: var(--sage-50); white-space: nowrap; }
+  .calendar-table tbody th { font-weight: 600; color: var(--forest-ink); min-width: 150px; }
+  .calendar-table tbody th a { color: inherit; text-decoration: underline; text-decoration-color: var(--sage-200); text-underline-offset: 3px; }
+  .calendar-table tbody th a:hover { color: var(--terracotta-dark); }
+  .calendar-table tbody tr:last-child th, .calendar-table tbody tr:last-child td { border-bottom: 0; }
+  .calendar-table td { min-width: 150px; }
+  .calendar-note { margin-top: 0.875rem; font-size: 0.9375rem; color: var(--muted); }
+  .faq-content { min-width: 0; }
+  @media (max-width: 720px) {
+    .calendar-table-wrap { overflow-x: visible; border: 0; border-radius: 0; background: none; }
+    .calendar-table, .calendar-table tbody, .calendar-table tr, .calendar-table th, .calendar-table td { display: block; width: 100%; min-width: 0; }
+    .calendar-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .calendar-table tbody tr { margin-bottom: 12px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: white; }
+    .calendar-table tbody tr:last-child { margin-bottom: 0; }
+    .calendar-table tbody th, .calendar-table tbody td { padding: 0; border-bottom: 0; }
+    .calendar-table tbody th { margin-bottom: 8px; font-size: 1.0625rem; }
+    .calendar-table tbody td { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 12px; padding: 6px 0; border-top: 1px solid var(--line); }
+    .calendar-table tbody td::before { content: attr(data-label); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--moss); padding-top: 2px; }
   }
 
   .faq-list { }
@@ -1060,6 +1089,7 @@ form button:disabled { opacity: .7; cursor: wait; }
           <li><a href="#getting-started" class="active">Getting Started</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#scheduling">Scheduling</a></li>
+          <li><a href="#calendar">Year-Round Calendar</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#guarantees">Guarantees</a></li>
           <li><a href="#the-team">The Team</a></li>
@@ -1251,6 +1281,86 @@ form button:disabled { opacity: .7; cursor: wait; }
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- YEAR-ROUND CALENDAR (added 2026-11-22). Keep this table in step with the service pages. -->
+        <div class="faq-category" id="calendar">
+          <div class="faq-category-head">
+            <div class="eyebrow">Year-Round Calendar</div>
+            <h2>What happens when.</h2>
+            <p>The best time of year for each service in Southaven and Olive Branch, how often it's done, and where pricing starts.</p>
+          </div>
+
+          <div class="calendar-table-wrap">
+            <table class="calendar-table">
+              <caption>Odyssey Lawn Care services by season, frequency, and starting price</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Service</th>
+                  <th scope="col">Best time of year</th>
+                  <th scope="col">How often</th>
+                  <th scope="col">Starting price</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <th scope="row"><a href="/lawn-mowing/">Lawn mowing</a></th>
+                    <td data-label="Best time of year">March through October</td>
+                    <td data-label="How often">Weekly (recommended) or biweekly</td>
+                    <td data-label="Starting price">From $50 per cut</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="/bush-trimming-removal/">Bush &amp; hedge trimming</a></th>
+                    <td data-label="Best time of year">Late winter or early spring, and again in mid-summer</td>
+                    <td data-label="How often">1 to 2 times a year for most shrubs, up to 3 for fast-growing hedges</td>
+                    <td data-label="Starting price">Free quote</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="/mulch-installation/">Mulch installation</a></th>
+                    <td data-label="Best time of year">Spring, usually March through May. Fall also works well.</td>
+                    <td data-label="How often">Most installs take one half-day visit</td>
+                    <td data-label="Starting price">Free quote</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="/flowerbed-maintenance/">Flowerbed maintenance</a></th>
+                    <td data-label="Best time of year">Year-round, with peak growing season May through August</td>
+                    <td data-label="How often">Monthly for most beds, every 2 to 3 weeks in peak season</td>
+                    <td data-label="Starting price">Free quote</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="/leaf-cleanup/">Leaf &amp; yard cleanup</a></th>
+                    <td data-label="Best time of year">Spring: March and April. Fall: late October through early December.</td>
+                    <td data-label="How often">Once or twice a year</td>
+                    <td data-label="Starting price">Free quote</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="/fertilization-weed-control/">Fertilization &amp; weed control</a></th>
+                    <td data-label="Best time of year">Service starts January 2027</td>
+                    <td data-label="How often">Scheduled applications through the year</td>
+                    <td data-label="Starting price">Free quote</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="/fire-ant-treatment/">Fire ant treatment</a></th>
+                    <td data-label="Best time of year">Service starts January 2027</td>
+                    <td data-label="How often">Set with your quote</td>
+                    <td data-label="Starting price">Free quote</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="/grub-treatment/">Grub treatment</a></th>
+                    <td data-label="Best time of year">Service starts January 2027</td>
+                    <td data-label="How often">Set with your quote</td>
+                    <td data-label="Starting price">Free quote</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="/christmas-lights/">Christmas lights</a></th>
+                    <td data-label="Best time of year">Installs start in November. Take-down is early to mid January.</td>
+                    <td data-label="How often">Once each holiday season</td>
+                    <td data-label="Starting price">From $595</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="calendar-note">Timing is for DeSoto County's growing season. Every quote is free, and you get one clear price before any work starts.</p>
         </div>
 
         <!-- SERVICES -->
@@ -1489,6 +1599,7 @@ form button:disabled { opacity: .7; cursor: wait; }
           <li><a href="/careers/">Careers</a></li>
           <li><a href="/faq/">FAQ</a></li>
           <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
