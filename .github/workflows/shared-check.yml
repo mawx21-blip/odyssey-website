@@ -1,0 +1,19 @@
+name: Shared header and footer check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - live-snapshot-2026-11-14
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Every page matches _shared/
+        run: python3 tools/sync_shared.py --check

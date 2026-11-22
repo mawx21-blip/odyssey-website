@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/npbahrmy/public_html/
-    - 'for item in *; do case "$item" in horn-lake-ms|new-home|README.txt|htaccess) ;; *) /bin/cp -Rf "$item" $DEPLOYPATH ;; esac; done'
+    - 'for item in *; do case "$item" in horn-lake-ms|new-home|README.txt|htaccess|_shared|tools) ;; *) /bin/cp -Rf "$item" $DEPLOYPATH ;; esac; done'
     - /bin/chmod -R 755 $DEPLOYPATH
